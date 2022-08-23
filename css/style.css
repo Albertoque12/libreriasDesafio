@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.contenedor{
+    grid-template-rows: 10rem 7rem 9rem 9rem 9rem 9rem 5.5rem;
+    grid-template-columns: repeat(4,1fr);
+    height: 100vh;
+    display: grid;
+grid-template-areas: "header header header header"
+                      "nav nav nav nav"
+                      "main main main aside"
+                      "main main main aside"
+                      "main main main aside"
+                      "main main main aside"
+                      "footer footer footer footer";
+}
+
+header{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: rgb(27, 47, 77);
+grid-area: header;
+}
+
+header div{
+    margin: 16rem;
+}
+
+
+
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: nav;
+    background-color:rgb(99, 158, 247);
+}
+
+main{
+    align-items: center;
+    justify-content: space-evenly;
+    display: flex;
+    grid-area: main;
+    background-color: rgb(108, 136, 179);
+    flex-wrap: wrap;
+}
+
+main div{
+    border: solid;
+    height: 5rem;
+    width: 5rem;
+    margin: 1rem;
+}
+
+footer{
+    grid-area: footer;
+    background-color: black;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: footer;
+    grid-area: aside;
+    background-color: rgb(117, 155, 212);
+}
+
+aside div{
+    border: solid;
+    width: 15rem;
+    height: 5rem;
+}
